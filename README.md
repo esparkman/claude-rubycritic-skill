@@ -163,31 +163,47 @@ formats:
 
 ## Examples
 
-### Pre-Commit Hook
+### Pre-Commit Analysis
 
-```bash
-# Check changed files before committing
-claude /rubycritic $(git diff --name-only --cached | grep '\.rb$')
+Before committing, ask Claude to check your changes:
+
 ```
+Analyze the code quality of the files I'm about to commit
+```
+
+Claude can check the staged files and provide feedback before you commit.
 
 ### Focus on High-Impact Files
 
-```bash
-# Analyze models (usually high-churn)
-claude /rubycritic app/models
+Target specific areas of your codebase:
 
-# Check controllers for fat controller issues
-claude /rubycritic app/controllers
+```
+Analyze the code quality of app/models
+```
+
+```
+Check the controllers for code quality issues
 ```
 
 ### Track Improvements
 
-```bash
-# Compare current work with main branch
-claude /rubycritic-compare main
+Monitor quality changes over time:
 
-# See what improved after refactoring
-claude /rubycritic app/services/user_service.rb
+```
+Compare the code quality of this branch with main
+```
+
+```
+How has the code quality of app/services/user_service.rb improved?
+```
+
+### CI/CD Integration
+
+In your CI pipeline, you can run RubyCritic directly:
+
+```bash
+# Run in CI to track quality trends
+rubycritic app/ --minimum-score 80 --format console
 ```
 
 ## Troubleshooting
@@ -203,7 +219,7 @@ claude /rubycritic app/services/user_service.rb
 - Or add to Gemfile and run `bundle install`
 
 **Analysis too slow?**
-- Narrow scope: `/rubycritic app/models` instead of entire project
+- Narrow scope: Ask to analyze specific directories instead of entire project
 - Exclude paths in `.rubycritic.yml`
 - Run full analysis in CI/CD only
 
