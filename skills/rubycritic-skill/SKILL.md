@@ -1,3 +1,11 @@
+---
+name: RubyCritic Code Quality Analysis
+description: Analyze Ruby and Rails code quality with RubyCritic. Identifies code smells, complexity issues, and refactoring opportunities. Provides detailed metrics, scores files A-F, compares branches, and prioritizes high-churn problem areas. Use when analyzing Ruby code quality, reviewing PRs, or identifying technical debt.
+version: 1.0.0
+author: Evan Sparkman
+tags: [ruby, rails, code-quality, refactoring, rubycritic, testing, static-analysis]
+---
+
 # RubyCritic Code Quality Analysis Skill
 
 A Claude Code skill for analyzing Ruby and Rails code quality using RubyCritic.
