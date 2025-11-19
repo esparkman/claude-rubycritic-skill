@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ask a Question
+    url: https://github.com/esparkman/claude-rubycritic-skill/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: Claude Code Documentation
+    url: https://docs.claude.com/en/docs/claude-code
+    about: Official Claude Code documentation and guides
+  - name: RubyCritic Documentation
+    url: https://github.com/whitesmith/rubycritic
+    about: RubyCritic gem documentation
