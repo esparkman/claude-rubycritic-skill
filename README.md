@@ -1,5 +1,11 @@
 # RubyCritic Skill for Claude Code
 
+[![GitHub stars](https://img.shields.io/github/stars/esparkman/claude-rubycritic-skill?style=flat-square)](https://github.com/esparkman/claude-rubycritic-skill/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/esparkman/claude-rubycritic-skill?style=flat-square)](https://github.com/esparkman/claude-rubycritic-skill/network)
+[![GitHub issues](https://img.shields.io/github/issues/esparkman/claude-rubycritic-skill?style=flat-square)](https://github.com/esparkman/claude-rubycritic-skill/issues)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Ruby](https://img.shields.io/badge/Ruby-2.7+-red.svg?style=flat-square)](https://www.ruby-lang.org/)
+
 A [Claude Code](https://docs.claude.com/en/docs/claude-code) skill that provides comprehensive code quality analysis for Ruby and Rails projects using [RubyCritic](https://github.com/whitesmith/rubycritic).
 
 ## Features
