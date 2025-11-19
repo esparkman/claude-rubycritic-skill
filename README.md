@@ -5,9 +5,9 @@ A [Claude Code](https://docs.claude.com/en/docs/claude-code) skill that provides
 ## Features
 
 - 🔍 **Code Quality Analysis** - Get detailed metrics on complexity, duplication, and code smells
-- 📊 **Multiple Commands** - Full analysis, summaries, worst files, and branch comparisons
+- 📊 **Multiple Analysis Types** - Full analysis, summaries, worst files, and branch comparisons
 - 🎯 **Rails-Aware** - Specific guidance for models, controllers, services, and concerns
-- ⚡ **Quick Feedback** - Simple slash commands in Claude Code
+- ⚡ **Model-Invoked** - Claude automatically knows when and how to use RubyCritic
 - 📈 **Track Progress** - Compare quality across branches and commits
 
 ## Installation
@@ -59,33 +59,48 @@ For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md).
 
 ## Usage
 
-Navigate to any Ruby or Rails project and use these commands in Claude Code:
+This is a **model-invoked skill** - Claude automatically knows when to use it based on your requests. Navigate to any Ruby or Rails project in Claude Code and simply ask in natural language:
 
-```bash
-# Analyze entire project
-claude /rubycritic
-
-# Analyze specific path
-claude /rubycritic app/models
-
-# Get a quick summary
-claude /rubycritic-summary
-
-# Find the worst files
-claude /rubycritic-worst --limit 5
-
-# Compare with another branch
-claude /rubycritic-compare main
+**Analyze entire project:**
+```
+Analyze the code quality of this project
 ```
 
-## Available Commands
+**Analyze specific paths:**
+```
+Check the code quality of app/models
+Run code quality analysis on app/controllers/users_controller.rb
+```
 
-| Command | Description |
-|---------|-------------|
-| `/rubycritic [path]` | Analyze code quality for specified path or entire project |
-| `/rubycritic-summary` | Quick overview of quality metrics |
-| `/rubycritic-worst` | Show files needing most attention |
-| `/rubycritic-compare [branch]` | Compare quality between branches |
+**Get a summary:**
+```
+Give me a quick summary of the code quality metrics
+```
+
+**Find worst files:**
+```
+Show me the 5 worst files that need refactoring
+What files have the lowest quality scores?
+```
+
+**Compare branches:**
+```
+Compare the code quality between this branch and main
+How has code quality changed since the main branch?
+```
+
+Claude will automatically invoke RubyCritic and provide detailed analysis with actionable insights.
+
+## What Claude Can Do
+
+When you ask about code quality, Claude will:
+
+- Run RubyCritic analysis on your specified files or directories
+- Provide detailed metrics on complexity, duplication, and code smells
+- Explain what the scores mean and why they matter
+- Suggest specific refactorings for identified issues
+- Compare quality across branches
+- Prioritize high-impact files that need attention
 
 ## Understanding the Results
 
